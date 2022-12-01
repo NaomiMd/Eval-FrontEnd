@@ -7,6 +7,7 @@
 body{
     overflow-x: hidden;
     font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
 }
 
 
@@ -27,7 +28,7 @@ body{
     align-items: center;
     color: white;
 }
-/**/
+
 .content{
     padding-top: 100px;
 }
@@ -51,10 +52,38 @@ body{
 #presentation p{
     font-weight: 400;
 }
+/**/
+a{
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer; 
+    text-align: center;
+    
+}
 
+.btn{
+    background-color: #4F87AB;
+    color: white;
+    border-radius: 14px;
+    font-size: 18px;
+    font-weight: 400;
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    
+}
 
-
-
+.btn:hover{
+    width: 105px;
+    height: 55px;
+    background-color: #375F78;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 12px;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 8px;
+}
 
 
 
