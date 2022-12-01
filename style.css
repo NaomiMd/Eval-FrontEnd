@@ -4,13 +4,13 @@
     margin: 0;
     padding: 0;
 }
-
 body{
     overflow-x: hidden;
     font-family: 'Raleway', sans-serif;
 }
 
-/* Accueil */
+
+/* ACCUEIL */
 .logo-header{
     visibility: hidden;
 }
@@ -27,9 +27,48 @@ body{
     align-items: center;
     color: white;
 }
-
+/**/
 .content{
     padding-top: 100px;
 }
 
+/*ACCUEIL PRESENTATION*/
+.logo-rond{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100px;
+}
+#presentation{
+    margin-top: 25px;
+    padding-bottom: 20px;
+    background-color: hsla(202, 79%, 85%, 0.224);
+}
+#presentation h4{
+    font-size: 18px;
+    color: #375F78;
+    font-weight: 600;
+}
+#presentation p{
+    font-weight: 400;
+}
 
+
+
+
+
+
+
+
+
+
+/*Media Query Tel*/
+@media screen and (min-width:302px) and (max-width: 1024px){
+    /*Accueil*/
+    .navbar-toggler{
+    background-color: #47555E;
+}
+}
+/*Media Query PC*/
+@media screen and (min-width: 1025px){
+   
+}
