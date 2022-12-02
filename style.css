@@ -145,10 +145,13 @@ a{
     width: 180px;
     padding: 11px;
 } 
-
+/*img*/
+.img-bas{
+    list-style: none;
+}
  
 
-/*Media Query Tel*/
+/*Media Query Tel-tablette*/
 @media screen and (min-width:302px) and (max-width: 1024px){
     /*Accueil*/
     .navbar-toggler{
@@ -183,7 +186,21 @@ a{
         padding: 50px;
         font-size: 15px;
     }
+    .img-bas{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(2, auto);
+        gap: 8px;
+        justify-content: center;
+        margin-bottom: 80px;
+    }
+    .img-footer img{
+        width: 100px;
+        height: 100px;
+    }
+
 }
+
 /*Media Query PC*/
 @media screen and (min-width: 1025px){
    /*galerie*/
@@ -226,4 +243,15 @@ a{
     padding: 60px 0 60px 0;
     font-size: 18px;
 }
+ 
+.img-footer img{
+    width: 200px;
+    height: 190px;
+}
+.img-bas{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 80px;
+}
+
 }
