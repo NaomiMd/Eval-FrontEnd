@@ -9,7 +9,13 @@ body{
     font-family: 'Raleway', sans-serif;
     letter-spacing: 1px;
 }
-
+/*NAV*/
+.navbar-scrolled{
+    background-color: #47555e;
+}
+.navbar{
+    transition: 0.5s;
+}
 
 /* ACCUEIL */
 .logo-header{
@@ -327,7 +333,9 @@ h5{
 @media screen and (min-width:302px) and (max-width: 1259px){
     /*Accueil*/
     .navbar-toggler{
-       background-color: #47555E; 
+       background-color: #47555E;
+       display: flex;
+       justify-content: flex-start; 
 }
     #presentation p{
         font-size: 15px;
