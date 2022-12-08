@@ -35,12 +35,12 @@
                 <a class="nav-link" href="Contact.html">Contact</a>
               </li>
               <li class="nav-item">
-                <a href="https://fr-fr.facebook.com/" class="nav-link">
+                <a href="https://fr-fr.facebook.com/" target="_blank" class="nav-link">
                   <img src="img/fb.png" alt="facebook" width="20" height="20" />
                 </a>
               </li>
               <li class="nav-item">
-                <a href="https://www.instagram.com/?hl=fr" class="nav-link">
+                <a href="https://www.instagram.com/?hl=fr" target="_blank" class="nav-link">
                   <img src="img/insta.png" alt="instagram" width="20" height="20" />
                 </a>
               </li>
@@ -50,43 +50,46 @@
       </nav>
       <!-- Banner -->
       <div class="banner-contact">
-        <div class="content text-center">
-          <h1 class="text">Contact</h1>
+        <div class="content-contact">
+          <h1>Contact</h1>
         </div>
       </div>
       </header>
       
-      <div class="contact-text">
-        <h3>Contactez-nous</h3>
+      <div class="poly">
+      <div class="contact-text text-center">
+        <h3>Contactez-moi</h3>
         <p> Vous voulez un devis pour une prestation<br>en particulier ou vous souhaitez<br>avoir plus d'informations pour construire votre projet?<br>Alors n'hésitez pas à me contacter grâce<br>à cette fiche contact.</p>
-        <p class="signature">Charles Cantin</p>
-        <p class="follow">Suivez-moi</p>
-        <div class="reseaux-social">
+        <p><span>Charles Cantin</span></p>
+        <div class="reseau-social">
+          <p>Suivez-moi :</p>
           <ul>
-            <li>
-              <a href="https://www.instagram.com/?hl=fr">
-                <img src="img/insta.png" alt="instagram" width="20" height="20" />
+            <li class="social text-center">
+              <a href="https://fr-fr.facebook.com/"target="_blank">
+                <img src="img/fb.png" alt="facebook" width="30" height="30" />
               </a>
             </li>
-            <li>
-              <a href="https://fr-fr.facebook.com/"></a>
-              <img src="img/fb.png" alt="facebook" width="20" height="20" />
+            <li class="social">
+              <a href="https://www.instagram.com/?hl=fr" target="_blank">
+                <img src="img/insta.png" alt="instagram" width="30" height="30" />
+              </a>
             </li>
           </ul>
         </div>
       </div>
+    </div>
 
       <div class="contact-form">
         <form>
-          <label for="lname">Nom</label>
-          <input type="text" id="lname"><br>
-          <label for="fname">Prenom</label>
-          <input type="text" id="fname"><br>
-          <label for="email">Email</label>
-          <input type="text" id="email"><br>
+          <label for="lname">Nom</label><br>
+          <input type="text" id="lname"  required><br>
+          <label for="fname">Prenom</label><br>
+          <input type="text" id="fname"  required><br>
+          <label for="email">Email</label><br>
+          <input type="text" id="email"  required><br>
           <label for="message">Message</label><br>
-          <textarea name="message" rows="12" cols="35" maxlength="500" minlength="10"></textarea><br>
-          <input type="submit" value="Envoyer">
+          <textarea name="message" rows="12" cols="35" maxlength="500" minlength="10"  required></textarea><br>
+          <input type="submit" value="Envoyer" class="btn">
         </form>
       </div>
 
@@ -109,10 +112,10 @@
         </div>
           <div class="col-4 reseaux">
           <p>Mes réseaux :</p>
-          <a href="https://www.instagram.com/?hl=fr" class="reseau-footer">
+          <a href="https://www.instagram.com/?hl=fr" target="_blank" class="reseau-footer">
             <img src="img/insta.png" alt="instagram" width="30" height="30" />
           </a>
-          <a href="https://fr-fr.facebook.com/" class="reseau-footer">
+          <a href="https://fr-fr.facebook.com/" target="_blank" class="reseau-footer">
             <img src="img/fb.png" alt="facebook" width="30" height="30" />
           </a>
           </div>
