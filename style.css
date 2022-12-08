@@ -189,6 +189,75 @@ footer{
     opacity: 0.8;
 }
 
+/*CONTACT*/
+.banner-contact{
+    background-image: url('img/contact.png');
+    background-color: #375F78;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.poly{
+    background-color: hsla(202, 79%, 85%, 0.224);
+}
+.contact-text{
+    font-size: 20px;
+}
+.contact-text h3{
+    font-weight: 500;
+}
+.contact-text p{
+    font-weight: 300;
+}
+.social{
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; 
+    transform: translate(-50%);
+    padding: 0 5px;
+}
+p span{
+    font-weight: 600;
+    color: #375F78;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #375F78;
+}
+
+form input{
+    border: 1px solid #4F87AB;
+    outline: none;
+    box-sizing: border-box;
+}
+form input:hover{
+    border: 2px solid #bce1f7e0;
+}
+form input:focus{
+    border: 3px solid #BCE1F7;
+}
+form textarea{
+    border: 1px solid #4F87AB;
+    outline: none;
+    box-sizing: border-box;
+    resize: none;
+}
+form textarea:hover{
+    border: 2px solid #bce1f7e0;
+}
+form textarea:focus{
+    border: 3px solid #BCE1F7;
+}
+
 
 /*Media Query Tel-tablette*/
 @media screen and (min-width:302px) and (max-width: 1259px){
@@ -278,7 +347,45 @@ footer{
         height: 300px;
         margin-bottom: 100px;
     }
-
+    /*contact*/
+    .banner-contact{
+        height: 300px;
+    }
+    .poly{
+        margin: 20px 30px ;
+        clip-path: polygon(50% 100%, 100% 65%, 100% 0, 0 0, 0 65%);
+        height: 50vh;
+        width: auto;
+    }
+    .contact-text{
+        font-size: 15px;
+        padding-top: 30px;
+    }
+    .contact-text h3{
+        padding-bottom: 15px;
+        font-size: 18px;
+    }
+    .contact-form{
+        margin: 60px;
+        font-size: 15px;
+    }
+    label{
+        padding-top: 12px;
+    }
+    form{
+        transform: translate(8%);
+    }
+    form input{
+        width: 85%;
+        height: 8%;
+        margin-top: 5px;
+    }
+    form textarea{
+        width: 85%;
+        height: 40%;
+        margin-top: 5px;
+    }
+   
 }
 
 /*Media Query PC*/
@@ -379,5 +486,38 @@ footer{
     height: 300px;
     margin-bottom: 100px;
 }
-
+/*contact*/
+.banner-contact{
+    height: 75vh;
+}
+.poly{
+    margin-top: 20px;
+    height: 60vh;
+    clip-path: polygon(50% 100%, 80% 70%, 80% 0, 20% 0, 20% 70%);
+}
+.contact-text{
+    font-size: 18px;
+    padding-top: 50px;
+}
+.contact-text h3{
+    padding-bottom: 15px;
+    font-size: 22px;
+}
+.contact-form{
+    font-size: 15px;
+    margin-bottom: 90px;
+}
+label{
+    padding-top: 20px;
+}
+form input{
+    width: 90vh;
+    height: 8%;
+    margin-top: 5px;
+}
+form textarea{
+    width: 90vh;
+    height: 40%;
+    margin-top: 5px;
+}
 }
