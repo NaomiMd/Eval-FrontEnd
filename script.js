@@ -3,7 +3,8 @@ let logoEl = document.querySelector('.logo-header')
 let navlinkEl = document.querySelectorAll('.nav-link');
 let menuLength = navlinkEl.length;
 let activePage = location.href;
-
+let images = document.querySelectorAll('#gallery img');
+let filters= document.querySelectorAll('#filters button');
 
 window.addEventListener('scroll',()=>{
     if(window.scrollY > 300){
@@ -24,3 +25,19 @@ for(let i = 0; i< menuLength; i++){
         navlinkEl[i].classList.remove('active');
     }
 }
+
+/* filtre galerie*/
+window.addEventListener('load',()=>{
+    
+    for(let filter of filters){
+        filter.addEventListener('click', function(){
+            let tag = this.id;
+            for(let image of images){
+                image.classList.replace('active', 'inactive');
+                if(tag in image.dataset || tag === 'all'){
+                    image.classList.replace('inactive', 'active');
+                }
+            }
+        })
+    }
+});
