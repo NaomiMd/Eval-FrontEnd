@@ -9,21 +9,29 @@ body{
     font-family: 'Raleway', sans-serif;
     letter-spacing: 1px;
 }
-/*NAV*/
 .navbar-scrolled{
     background-color: #47555e;
+    opacity: 0.9;
 }
-.navbar{
-    transition: 0.5s;
+.nav-link{
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    font-weight: 300;
+    text-shadow: 1px 1px 1px #47555E;
 }
-
-/* ACCUEIL */
+.nav-link:hover{
+    color: rgba(255, 255, 255, 0.766);
+}
+.nav-link.active{
+    font-weight: 700;
+    transition: 0.2 ease-in;
+}
 .logo-header{
     visibility: hidden;
+    transition: 0.5s ease-in;
 }
-
 #banner-img{
-    background-image: url(img/acceuil.png);
+    background-image: url(img/accueil.png);
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -34,12 +42,9 @@ body{
     align-items: center;
     color: white;
 }
-
 .content{
     padding-top: 100px;
 }
-
-/*ACCUEIL PRESENTATION*/
 .logo-rond{
     margin-top: 20px;
     margin-bottom: 10px;
@@ -59,14 +64,13 @@ body{
 #presentation p{
     font-weight: 400;
 }
-
 a{
     text-decoration: none;
     display: inline-block;
     cursor: pointer; 
     text-align: center;
+    color: white;
 }
-
 .btn{
     background-color: #4F87AB;
     color: white;
@@ -77,10 +81,8 @@ a{
     height: 55px;
     padding: 13px;
     margin: 15px 0 15px 0;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; 
 }
-
 .btn:hover{
     width: 110px;
     height: 52px;
@@ -91,14 +93,12 @@ a{
     color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 8px;
 }
-
 .grid-container{
     display: grid;
     justify-content: center;
     justify-items: stretch;
     align-items: center;
     opacity: 0.9;
-    
 }
 .box-2{
     display: grid;
@@ -108,12 +108,14 @@ a{
     background-position: center;
     background-size: cover;
     background-color: #375F78;
+    box-shadow: 1px 1px 3px #375f7863; 
 }
 .box-1,
 .box-3{
     display: grid;
     justify-content: center;
     align-items: center;
+    box-shadow: 1px 1px 3px #375f7863;
 }
 .box-1{
     background-image: url('img/couple.jpg');
@@ -127,29 +129,31 @@ a{
     background-position: center;
     background-size: cover;
 }
-
 .filtre{
     background-color: rgba(183, 183, 183, 0.202);
     color: white;
     font-weight: 600;
 }
-/*Contact*/
 .container-fluid.contact{
     background-color: hsla(202, 79%, 85%, 0.224);
     font-weight: 400;
     text-align: center;
 }
-
-/*img*/
 .img-bas{
     list-style: none;
 }
-/*footer*/
 footer{
     background-color: #47555E;
     color: white;
+    font-weight: 300;
 }
-/*GALERIE PAGE*/
+.logo-footer{
+    width: 120px;
+    height: 120px;
+}
+.copyright{
+    font-weight: 400;
+}
 .banner-galerie{
     background-image: url('img/galerie.png');
     background-color: #375F78;
@@ -160,42 +164,56 @@ footer{
     justify-content: center;
     align-items: center;
 }
-#form{
-    display: flex;
-    justify-content: end;
-   
-}
-.search-text{
-    display: flex;
-    justify-content: end;
+hr{
+    border: solid 1px #375F78;
+    width: 50%;
+    margin: 5% 0 5% 25%;
 
 }
-.search{
-    border: solid black;
+.container.search p{
+    margin: 30px 0;
 }
-.search::placeholder{
+.btn-search{
+    text-decoration: none;
+    border: 2px solid #375F78;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
     color: #375F78;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
 }
-
-.transimg{
-    display: block;
-    text-align: center;
-    position: relative;
-    isolation: isolate;
+.btn-search:hover,
+.btn-search:focus{
+    box-shadow: 0 0.8em 0.8em -0.9em #375F78;
+    color: white;
+    background-color: #375F78;
 }
-.transimg::after{
-    content: ' ';
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    background: #375F78; 
-    background-image: url('img/banner.jpg');
-    background-position: center;
-    background-size: cover;
-    opacity: 0.8;
+#filters{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
-
-/*CONTACT*/
+#gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}   
+#gallery .active{
+    padding: 5px;
+    transition: width 0.5s;
+} 
+#gallery .inactive{
+    width: 0;
+    height: 0;
+    padding: 0;
+    transition: width 0.5s;
+}
 .banner-contact{
     background-image: url('img/contact.png');
     background-color: #375F78;
@@ -210,14 +228,16 @@ footer{
     background-color: hsla(202, 79%, 85%, 0.224);
 }
 .contact-text{
-    font-size: 20px;
+    font-weight: 400;
 }
 .contact-text h3{
+    padding-bottom: 15px;
     font-weight: 500;
 }
 .contact-text p{
     font-weight: 300;
 }
+
 .social{
     text-decoration: none;
     display: inline-flex;
@@ -231,7 +251,6 @@ p span{
     font-weight: 600;
     color: #375F78;
 }
-
 .contact-form{
     display: flex;
     flex-direction: column;
@@ -239,11 +258,12 @@ p span{
     align-items: center;
     color: #375F78;
 }
-
 form input{
     border: 1px solid #4F87AB;
     outline: none;
     box-sizing: border-box;
+    height: 8%;
+    margin-top: 5px;
 }
 form input:hover{
     border: 2px solid #bce1f7e0;
@@ -256,6 +276,8 @@ form textarea{
     outline: none;
     box-sizing: border-box;
     resize: none;
+    height: 40%;
+    margin-top: 5px;
 }
 form textarea:hover{
     border: 2px solid #bce1f7e0;
@@ -263,7 +285,6 @@ form textarea:hover{
 form textarea:focus{
     border: 3px solid #BCE1F7;
 }
-/*TARIFS*/
 .banner-tarifs{
     background-image: url('img/tarifs.png');
     background-color: #375F78;
@@ -282,11 +303,9 @@ form textarea:focus{
     text-align: center;
     font-weight: 400;
 }
-/*FORMULES*/
 .formule{
     text-align: center;
 }
- 
 .cadre{
     box-shadow: 1px 1px 1px 3px #375f7815;
     display: block;
@@ -297,50 +316,50 @@ h5{
 .formule p{
     font-weight: 300;
 }
-
-/*IMAGES*/
 .images{
     background-color: #375F78;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: 0 3px 3px #375F78;
+    width: 100%;
+    height: 40%;
 }
 #seul{
-    background-image: url('img/seul.jpg');
+    background-image: url('img/Tarifportrait.jpg');
 }
 #deux{
-    background-image: url('img/pourdeux2.jpg');
+    background-image: url('img/Tarifpour2.jpg');
 }
 #famille{
     background-image: url('img/TarifFamille.jpg');
 }
 #grossesse{
-    background-image: url('img/grossesse.jpg');
+    background-image: url('img/Tarifgrossesse.jpg');
 }
 #bebe{
-    background-image: url('img/monbebe.jpg');
+    background-image: url('img/Tarifmonbebe.jpg');
 }
 #evenement{
-    background-image: url('img/evenement.jpg');
+    background-image: url('img/Tarifevenement.jpg');
 }
 .formule a{
     position: relative;
     left: 5px;
 }
-
-/*Media Query Tel-tablette*/
 @media screen and (min-width:302px) and (max-width: 1259px){
-    /*Accueil*/
     .navbar-toggler{
        background-color: #47555E;
-       display: flex;
-       justify-content: flex-start; 
-}
+    }
+    .nav-link{
+        display: flex;
+    }
+    .navbar-scrolled{
+        transition: .4s ease-in;
+    }
     #presentation p{
         font-size: 15px;
     }
-    /*galerie*/
     .grid-container{
        margin: 40px 0 20px 0;
        gap: 15px;
@@ -356,7 +375,6 @@ h5{
         font-size: 22px;
         letter-spacing: 2px;
     }
-
     #btn-galerie{
         margin: 20px 0 20px 0;
     }
@@ -379,47 +397,33 @@ h5{
         width: 100px;
         height: 100px;
     }
-/*footer*/
     footer{
         height: auto;
         display: flex;
         align-items: center;
         font-size: 12px;
-        font-weight: 300;
-    }
-    .logo-footer{
-        width: 120px;
-        height: 120px;
     }
     .copyright{
         margin-top: 77%;
+        font-size: 12px;
     }
-    /*GALERIE PAGE*/
     .banner-galerie{
         height: 300px;
     }
-    #form{
-        margin-top: 50px;
-        margin-bottom: 5px;
-    }
-    .search-text{
-        font-size: 10px;
-        font-weight: 300;
-        margin-bottom: 50px;
-    }
-    .search{
-        width: 220px;
-        height: 35px; 
-    }
-  
-    .transimg{
+    .container.search p{
         font-size: 20px;
         font-weight: 500;
-        padding: 50px;
-        height: 300px;
-        margin-bottom: 100px;
     }
-    /*contact*/
+    .btn-search{
+        font-size: 18px;
+        margin: 0 10px 10px 0;
+    }
+    #gallery{
+        margin: 10% 5% 35% 5%;
+    }
+    #gallery .active{
+        width: 80%;
+    } 
     .banner-contact{
         height: 300px;
     }
@@ -434,7 +438,6 @@ h5{
         padding-top: 30px;
     }
     .contact-text h3{
-        padding-bottom: 15px;
         font-size: 18px;
     }
     .contact-form{
@@ -449,15 +452,10 @@ h5{
     }
     form input{
         width: 85%;
-        height: 8%;
-        margin-top: 5px;
     }
     form textarea{
         width: 85%;
-        height: 40%;
-        margin-top: 5px;
     }
-    /*TARIFS*/
     .banner-tarifs{
         height: 300px;
     }
@@ -466,7 +464,6 @@ h5{
         margin: 40px 20px;
         padding: 25px 15px;
     }
-    /*FORMULES*/
     .formule1,
     .formule2,
     .formule3{
@@ -491,11 +488,8 @@ h5{
     .formule p{
         font-size: 15px;
     }
-    
-    /*IMAGES*/
     .images{
-        width: 100%;
-        height: 40%;
+
         margin-bottom: 30px;
     }
     .formule a {
@@ -505,36 +499,29 @@ h5{
         font-size: 10px;
     }
 }
-
-/*Media Query PC*/
 @media screen and (min-width: 1260px){
-   /*galerie*/
+.navbar-scrolled{
+    transition: 0.8s ease-in;
+}
 #presentation p{
     font-size: 18px;
 }
-
 .grid-container{
     grid-template-columns: repeat(3, 400px);
     grid-template-rows: repeat(1, 1fr);
     gap: 20px;
     margin: 60px;
 }
-
 .box-2{
     margin-bottom: 90px;
-    background-color: #375F78;
     width: 400px;
     height: 400px;
-    box-shadow: 1px 1px 3px #375f7863;
-    
 }
 .box-1,
 .box-3{
     margin-top: 100px;
     width: 400px;
     height: 400px;
-    box-shadow: 1px 1px 3px #375f7863;
-    
 }
 .filtre{
     padding: 120px;
@@ -548,7 +535,6 @@ h5{
     padding: 60px 0 60px 0;
     font-size: 18px;
 }
- 
 .img-footer img{
     width: 180px;
     height: 170px;
@@ -560,51 +546,38 @@ h5{
     align-items: center;
     margin-bottom: 80px;
 }
-/*footer*/
 footer{
-    height: 230px;
+    height: 20%;
     display: flex;
     align-items: center;
-}
-.logo-footer{
-    width: 120px;
-    height: 120px;
+    font-size: 15px;
 }
 .copyright{
     margin-top: 45%;
     font-size: 15px;
-    font-weight: 400;
 }
 .col-4.reseaux{
     font-size: 18px;
     font-size: 500;
 }
-/*GALERIE PAGE*/
 .banner-galerie{
     height: 75vh;
 }
-#form{
-    margin-top: 30px;
-    margin-bottom: 5px;
+.container.search p{
+    font-size: 25px;
+    margin: 30px 0;
+    font-weight: 600;
 }
-.search-text{
-    font-size: 12px;
-    font-weight: 300;
-    margin-bottom: 50px;
-}
-.search{
-    width: 220px;
-    height: 35px; 
-}
-
-.transimg{
+.btn-search{
     font-size: 20px;
-    font-weight: 500;
-    padding: 50px;
-    height: 300px;
-    margin-bottom: 100px;
+    margin-right: 15px ;
 }
-/*contact*/
+#gallery{
+    margin: 0 15% 20% 15%;
+}
+#gallery .active{
+    width: 40%;
+} 
 .banner-contact{
     height: 75vh;
 }
@@ -618,11 +591,10 @@ footer{
     padding-top: 50px;
 }
 .contact-text h3{
-    padding-bottom: 15px;
     font-size: 22px;
 }
 .contact-form{
-    font-size: 15px;
+    font-size: 18px;
     margin-bottom: 90px;
 }
 label{
@@ -630,15 +602,10 @@ label{
 }
 form input{
     width: 90vh;
-    height: 8%;
-    margin-top: 5px;
 }
 form textarea{
     width: 90vh;
-    height: 40%;
-    margin-top: 5px;
 }
-/*TARIFS*/
 .banner-tarifs{
     height: 75vh;
 }
@@ -647,7 +614,6 @@ form textarea{
     padding: 50px;
     font-size: 18px;
 }
-/*FORMULES*/
 .formule{
     margin-bottom: 180px;
 }
@@ -673,11 +639,7 @@ h5{
 .formule p{
     font-size: 18px;
 }
-
-/*IMAGES*/
 .images{
-    width: 100%;
-    height: 40%;
     margin-bottom: 40px;
 }
 }

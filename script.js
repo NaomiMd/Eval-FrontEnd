@@ -15,9 +15,6 @@ window.addEventListener('scroll',()=>{
         logoEl.classList.add('logo-header');
     }
 });
-
-/* quand on est sur la page accueil navlink active
-quand on sort de la page accueil navlink remove active*/
 for(let i = 0; i< menuLength; i++){
     if(navlinkEl[i].href === activePage){
         navlinkEl[i].classList.add('active');
@@ -25,8 +22,6 @@ for(let i = 0; i< menuLength; i++){
         navlinkEl[i].classList.remove('active');
     }
 }
-
-/* filtre galerie*/
 window.addEventListener('load',()=>{
     
     for(let filter of filters){
